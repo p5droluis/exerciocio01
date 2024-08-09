@@ -1,0 +1,166 @@
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> echo "Inicio do Exercicio" > README.md 
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git add README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git commit -m "Adicionando o README.md"
+[main 867b5c8] Adicionando o README.md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/p5droluis/exerciocio01.git
+   9316577..867b5c8  main -> main
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> echo "01" >> README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git add README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01>
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git commit -m "Adicionando o 01 no arquivo, adicionando a staging e consultando o status, fazendo o commit"
+[main 717704f] Adicionando o 01 no arquivo, adicionando a staging e consultando o status, fazendo o commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git push origin main  
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/p5droluis/exerciocio01.git
+   867b5c8..717704f  main -> main
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01>
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> echo "02" >> README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git diff 
+diff --git a/README.md b/README.md
+index 139e220..2755d02 100644
+Binary files a/README.md and b/README.md differ
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01>
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git add README.md  
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01>
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git diff
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> 
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> echo "03" >> README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git diff
+diff --git a/README.md b/README.md
+index 2755d02..f4438a7 100644
+Binary files a/README.md and b/README.md differ
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git restore --staged README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01>
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git commit -m "Adicionando o 02 e 03 no arquivo, adicionando a staging e consultando o status, feito o restore e fazendo o commit"
+[main 07f9340] Adicionando o 02 e 03 no arquivo, adicionando a staging e consultando o status, feito o restore e fazendo o commit   
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ 
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git log
+commit 07f934033e901bb35d0afb2e38e3b6868ce16f33 (HEAD -> main)
+Author: Pedro Machado <pedro.machado04@hotmail.com>
+Date:   Fri Aug 9 12:01:49 2024 -0300
+
+    Adicionando o 02 e 03 no arquivo, adicionando a staging e consultando o status, feito o restore e fazendo o commit
+
+commit 717704fa0fc987a65f5c69e56aa5d00cc465a03d (origin/main, origin/HEAD)
+Author: Pedro Machado <pedro.machado04@hotmail.com>
+Date:   Fri Aug 9 11:54:24 2024 -0300
+
+    Adicionando o 01 no arquivo, adicionando a staging e consultando o status, fazendo o commit
+
+commit 867b5c8215220a4c9b5863aa53491596b31af3b3
+Author: Pedro Machado <pedro.machado04@hotmail.com>
+Date:   Fri Aug 9 11:49:39 2024 -0300
+
+    Adicionando o README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git commit -m "Adicionando o 02 e 03 no arquivo, adicionando a staging e consultando o status, feito o restore e fazendo o commit"
+[main 07f9340] Adicionando o 02 e 03 no arquivo, adicionando a staging e consultando o status, feito o restore e fazendo o commit   
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git log
+commit 07f934033e901bb35d0afb2e38e3b6868ce16f33 (HEAD -> main)
+Author: Pedro Machado <pedro.machado04@hotmail.com>
+Date:   Fri Aug 9 12:01:49 2024 -0300
+
+    Adicionando o 02 e 03 no arquivo, adicionando a staging e consultando o status, feito o restore e fazendo o commit
+
+commit 717704fa0fc987a65f5c69e56aa5d00cc465a03d (origin/main, origin/HEAD)
+Author: Pedro Machado <pedro.machado04@hotmail.com>
+Date:   Fri Aug 9 11:54:24 2024 -0300
+
+    Adicionando o 01 no arquivo, adicionando a staging e consultando o status, fazendo o commit
+
+commit 867b5c8215220a4c9b5863aa53491596b31af3b3
+Author: Pedro Machado <pedro.machado04@hotmail.com>
+Date:   Fri Aug 9 11:49:39 2024 -0300
+
+    Adicionando o README.md
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> echo "novo.txt" > .gitignore
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git add .gitignore
+[main 38afcf0] Adicionando arquivo gitignore
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> echo "Arquivo para ser ignorado" > novo.txt
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+  (use "git add <file>..." to include in what will be committed)
+        novo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git add .
+[main 0b04899] Adicionando arquivo novo.txt
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/p5droluis/exerciocio01.git
+   1fc4c90..0b04899  main -> main
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git rm --cached novo.txt
+rm 'novo.txt'
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git commit -m "Remover arquivo do repositório novo.txt  e adicionar ao .gitignore"
+[main 6de78e2] Remover arquivo do repositório novo.txt  e adicionar ao .gitignore
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 novo.txt
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git status              
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01> git push origin main    
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 266 bytes | 266.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/p5droluis/exerciocio01.git
+   0b04899..6de78e2  main -> main
+PS C:\Users\Taurine\Desktop\MEI\Documentos\git\mba\exerciocio01>
